@@ -1,0 +1,23 @@
+listen: 0.0.0.0:48731
+storage: ./storage
+auth:
+  gitlab:
+    url: https://git.tdolsen.net
+  htpasswd:
+    file: ./.htpasswd
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+packages:
+  '@*/*':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+    gitlab: true
+  '**':
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+    gitlab: true
+logs:
+  - {type: stdout, format: pretty, level: http}

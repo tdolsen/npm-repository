@@ -1,0 +1,14 @@
+{
+  "name": "npm-registry",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Torkild Dyvik Olsen <torkild@tdolsen.net>",
+  "license": "MIT",
+  "scripts": {
+    "start": "verdaccio -c ./verdaccio.yaml"
+  },
+  "dependencies": {
+    "verdaccio": "^2.7.4",
+    "verdaccio-gitlab": "^1.0.0"
+  }
+}
