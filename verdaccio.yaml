@@ -1,10 +1,14 @@
-listen: 0.0.0.0:48731
+listen: https://0.0.0.0:48731
 storage: ./storage
 auth:
   gitlab:
     url: https://git.tdolsen.net
   htpasswd:
     file: ./.htpasswd
+https:
+  key: /etc/letsencrypt/live/git.tdolsen.net/privkey.pem
+  cert: /etc/letsencrypt/live/git.tdolsen.net/cert.pem
+  ca: /etc/letsencrypt/live/git.tdolsen.net/fullchain.pem
 uplinks:
   npmjs:
     url: https://registry.npmjs.org/
